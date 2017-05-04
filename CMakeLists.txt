@@ -3,8 +3,9 @@ project(general_pose_estimator)
 
 find_package(
  PCL 1.7 REQUIRED 
- OpenMP
 )
+find_package(OPENMP)
+
 include_directories(
  ${EIGEN_INCLUDE_DIRS}
  ${PCL_INCLUDE_DIRS}
