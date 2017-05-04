@@ -1,1 +1,0 @@
-/home/wangy/pcl_ws/general_pose_estimation/build/CMakeFiles/general_pose_estimator.dir

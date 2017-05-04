@@ -2,10 +2,9 @@ cmake_minimum_required(VERSION 2.8.3)
 project(general_pose_estimator)
 
 find_package(
- PCL 1.7 REQUIRED PATHS /usr NO_DEFAULT_PATH
+ PCL 1.7 REQUIRED 
+ OpenMP
 )
-find_package(OPENMP)
-
 include_directories(
  ${EIGEN_INCLUDE_DIRS}
  ${PCL_INCLUDE_DIRS}
@@ -21,6 +20,3 @@ endif()
 
 add_executable(general_pose_estimator src/general_pose_estimation.cpp)
 target_link_libraries(general_pose_estimator ${PCL_LIBRARIES} ${Boost_LIBRARIES} ${EIGEN_INCLUDE_DIRS})
-
-
-
